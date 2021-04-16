@@ -326,6 +326,10 @@ kraken2/run:
   - software/untar/**
   - tests/software/kraken2/run/**
 
+last_lastal:
+  - software/last/lastal/**
+  - tests/software/last/lastal/**
+
 last_lastdb:
   - software/last/lastdb/**
   - tests/software/last/lastdb/**
