@@ -1,0 +1,22 @@
+- name: last train test_last_train
+  command: nextflow run tests/software/last/train -entry test_last_train -c tests/config/nextflow.config
+  tags:
+    - last
+    - last_train
+  files:
+    - path: output/last/lastdb/test.bck
+      md5sum: 5519879b9b6c4d1fc508da7f17f88f2e
+    - path: output/last/lastdb/test.des
+      md5sum: 3a9ea6d336e113a74d7fdca5e7b623fc
+    - path: output/last/lastdb/test.prj
+      md5sum: 5f5b36eb797cf1dfcef3d1bca39baf35
+    - path: output/last/lastdb/test.sds
+      md5sum: 2cd381f4f8a9c52cfcd323a2863eccb2
+    - path: output/last/lastdb/test.ssp
+      md5sum: 4137fb6fe9df2b3d78d5b960390aac7b
+    - path: output/last/lastdb/test.suf
+      md5sum: 1895efa8653e8e9bd3605cff0408ed33
+    - path: output/last/lastdb/test.tis
+      md5sum: b7c40f06b1309dc6f37849eeb86dfd22
+    - path: output/last/param.par
+      contains: 'score matrix'
