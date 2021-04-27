@@ -18,5 +18,5 @@
       md5sum: 1895efa8653e8e9bd3605cff0408ed33
     - path: output/last/lastdb/test.tis
       md5sum: b7c40f06b1309dc6f37849eeb86dfd22
-    - path: output/last/test.maf.gz
+    - path: output/last/test__test.maf.gz
       md5sum: 0fc9b87c22431a6cb6459a3ea382daf9

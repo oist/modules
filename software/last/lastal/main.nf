@@ -35,7 +35,7 @@ process LAST_LASTAL {
         -P $task.cpus \\
         ${index}/${meta_index.id} \\
         ${fastx} \\
-        | gzip --no-name > ${meta.id}.maf.gz
+        | gzip --no-name > ${meta.id}__${meta_index.id}.maf.gz
     # gzip needs --no-name otherwise it puts a timestamp in the file,
     # which makes its checksum non-reproducible.
 
