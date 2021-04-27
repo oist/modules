@@ -11,11 +11,11 @@ process LAST_LASTDB {
         mode: params.publish_dir_mode,
         saveAs: { filename -> saveFiles(filename:filename, options:params.options, publish_dir:getSoftwareName(task.process), publish_id:meta.id) }
 
-    conda (params.enable_conda ? "bioconda::last=1205" : null)
+    conda (params.enable_conda ? "bioconda::last=1219" : null)
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
-        container "https://depot.galaxyproject.org/singularity/last:1205--h2e03b76_1"
+        container "https://depot.galaxyproject.org/singularity/last:1219--h2e03b76_0"
     } else {
-        container "quay.io/biocontainers/last:1205--h2e03b76_1"
+        container "quay.io/biocontainers/last:1219--h2e03b76_0"
     }
 
     input:
