@@ -42,8 +42,8 @@ input:
         e.g. [ id:'test', single_end:false ]
   - fastx:
       type: file
-      description: FASTA/FASTQ file
-      pattern: "*.{fasta,fastq}"
+      description: FASTA/FASTQ file.  May be compressed with gzip.
+      pattern: "*.{fasta,fasta.gz,fastq,fastq.gz}"
 
 output:
   - meta:
