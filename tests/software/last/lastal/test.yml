@@ -1,8 +1,9 @@
-- name: last lastal test_last_lastal
-  command: nextflow run tests/software/last/lastal -entry test_last_lastal -c tests/config/nextflow.config
+- name: last lastal test_last_lastal_with_dummy_param_file
+  command: nextflow run tests/software/last/lastal -entry test_last_lastal_with_dummy_param_file -c tests/config/nextflow.config
   tags:
-    - last_lastal
+    - last_lastal_with_dummy_param_file
     - last
+    - last_lastal
   files:
     - path: output/last/lastdb/test.bck
       md5sum: 5519879b9b6c4d1fc508da7f17f88f2e
@@ -20,3 +21,29 @@
       md5sum: b7c40f06b1309dc6f37849eeb86dfd22
     - path: output/last/test__test.maf.gz
       md5sum: 0fc9b87c22431a6cb6459a3ea382daf9
+
+- name: last lastal test_last_lastal_with_real_param_file
+  command: nextflow run tests/software/last/lastal -entry test_last_lastal_with_real_param_file -c tests/config/nextflow.config
+  tags:
+    - last
+    - last_lastal
+    - last_lastal_with_real_param_file
+  files:
+    - path: output/last/lastdb/test.bck
+      md5sum: 5519879b9b6c4d1fc508da7f17f88f2e
+    - path: output/last/lastdb/test.des
+      md5sum: 3a9ea6d336e113a74d7fdca5e7b623fc
+    - path: output/last/lastdb/test.prj
+      md5sum: 489715f14b0fea6273822696e72357f9
+    - path: output/last/lastdb/test.sds
+      md5sum: 2cd381f4f8a9c52cfcd323a2863eccb2
+    - path: output/last/lastdb/test.ssp
+      md5sum: 4137fb6fe9df2b3d78d5b960390aac7b
+    - path: output/last/lastdb/test.suf
+      md5sum: 1895efa8653e8e9bd3605cff0408ed33
+    - path: output/last/lastdb/test.tis
+      md5sum: b7c40f06b1309dc6f37849eeb86dfd22
+    - path: output/last/param.par
+      contains: 'score matrix'
+    - path: output/last/test__test.maf.gz
+      md5sum: 064a3fe25daf26455357a4ef96bd6016

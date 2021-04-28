@@ -29,8 +29,10 @@ process LAST_LASTAL {
 
     script:
     def software = getSoftwareName(task.process)
+    def trained_params = param_file.exists() ? "-p ${param_file}"  : ""
     """
     lastal \\
+        ${trained_params} \\
         ${options.args} \\
         -P $task.cpus \\
         ${index}/${meta_index.id} \\
