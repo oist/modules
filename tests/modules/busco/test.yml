@@ -1,0 +1,9 @@
+- name: busco test_busco
+  command: nextflow run tests/software/busco -entry test_busco -c tests/config/nextflow.config
+  tags:
+    - busco
+  files:
+    - path: output/busco/test/run_chr22_odb10/full_table.tsv
+      md5sum: 997d4b7a1631ca1e3219090fcc022335
+    - path: output/busco/test/run_chr22_odb10/short_summary.txt
+      contains: ['1	Complete BUSCOs (C)']
