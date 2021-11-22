@@ -11,5 +11,6 @@ workflow test_busco {
    lineage_dataset = file('https://github.com/nf-core/test-datasets/raw/modules/data/genomics/homo_sapiens/genome/BUSCO/chr22_odb10.tar.gz', checkIfExists: true)
 
    BUSCO ( input,
+            [],
             [] )
 }
