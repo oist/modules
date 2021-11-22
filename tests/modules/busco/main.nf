@@ -2,7 +2,7 @@
 
 nextflow.enable.dsl = 2
 
-include { BUSCO } from '../../../modules/busco/main.nf' addParams( options: [args: '--mode genome --auto-lineage'] )
+include { BUSCO } from '../../../modules/busco/main.nf' addParams( options: [args: '--mode genome --lineage_dataset bacteroidales_odb10'] )
 
 workflow test_busco {
     
